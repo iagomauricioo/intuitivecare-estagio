@@ -7,7 +7,7 @@ Candidato: Iago Mauricio dos Santos Silva
 
 ## Questão 1 e 2
 
-Optei por fazer as questões 1 e 2 utilizando um serviço de computação em nuvem em um cluster do <a href="https://colab.research.google.com/drive/1Pq-1cBO6AIXMyY-JAn-PWqbUyN3mMrpF?usp=sharing"><img src="https://img.shields.io/badge/Google%20Colab-%23F9A825.svg?style=for-the-badge&logo=googlecolab&logoColor=white" width="80"></a>
+Optei por fazer as questões 1 e 2 utilizando um serviço de computação em nuvem em um cluster do <a href="https://colab.research.google.com/drive/1Pq-1cBO6AIXMyY-JAn-PWqbUyN3mMrpF?usp=sharing"><img src="https://img.shields.io/badge/Google%20Colab-%23F9A825.svg?style=for-the-badge&logo=googlecolab&logoColor=white" width="120"></a>
 , já que não seria necessário a utilização de banco de dados, então me senti mais confortável em fazer por lá.
 
 <a href="https://colab.research.google.com/drive/1Pq-1cBO6AIXMyY-JAn-PWqbUyN3mMrpF?usp=sharing">Link para o notebook Python</a>
