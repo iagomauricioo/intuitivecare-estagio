@@ -9,7 +9,7 @@ Original file is located at
 
 import pandas as pd
 import os
-from inserir_dados_no_banco import inserir_dados_no_postgres
+from operacoes_no_db import inserir_dados_no_postgres, visualizar_tabela
 
 pasta_csv = 'documentos/trimestres'
 arquivos = [f for f in os.listdir(pasta_csv) if f.endswith('.csv')]
@@ -39,8 +39,14 @@ print("\n")
 print(f"CSV gerado: {csv_file}")
 print("\n")
 
-deseja_importar_os_dados = input("Você deseja executar o comando para importar os dados para o banco de dados (Postgres)? (Digite 'sim' para executar ou 'não' para cancelar): ")
-if deseja_importar_os_dados.lower() == 'sim' or deseja_importar_os_dados.lower() == 's' or deseja_importar_os_dados.lower() == 'y' or deseja_importar_os_dados.lower() == 'yes':
-    inserir_dados_no_postgres()    
+deseja_importar = input("Você deseja executar o comando para importar os dados para o banco de dados (Postgres)? (Digite 'sim' para executar ou 'não' para cancelar): ")
+if deseja_importar.lower() == 'sim':
+    inserir_dados_no_postgres()
+else:
+    print("Ação cancelada.")
+    
+deseja_visualizar = input("Você deseja visualizar a tabela 'demonstracoes_contabeis' no banco de dados (Postgres)? (Digite 'sim' para visualizar ou 'não' para cancelar): ")
+if deseja_visualizar.lower() == 'sim':
+    visualizar_tabela(5)    
 else:
     print("Ação cancelada.")
