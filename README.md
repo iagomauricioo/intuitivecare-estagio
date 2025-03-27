@@ -8,7 +8,7 @@ Candidato: Iago Mauricio dos Santos Silva
 ## Sobre o código:
 
 #### Atenção
-Antes de rodar o código, execute `pip install -r requirements.txt`, caso queira, pode também criar um Virtual Enviroment (.venv) com `python3 -m venv .venv`
+Antes de rodar o código, execute `pip install -r requirements.txt`. Caso queira, pode também criar um Virtual Enviroment (.venv) com `python3 -m venv .venv`
 
 O arquivo `questao3_intuitivecare.py` é responsável por ler os arquivos .csv e unificar todos eles no arquivo `dados.csv` (que só é gerado após o código rodar).
 
