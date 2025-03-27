@@ -32,27 +32,15 @@ csv_file = "dados.csv"
 df_total['VL_SALDO_INICIAL'] = df_total['VL_SALDO_INICIAL'].str.replace(',', '.').astype(float)
 df_total['VL_SALDO_FINAL'] = df_total['VL_SALDO_FINAL'].str.replace(',', '.').astype(float)
 df_total.to_csv(csv_file, sep=';', index=False, header=False, encoding='utf-8', decimal='.')
+
 sql_file = "import.sql"
-with open(sql_file, "w", encoding="utf-8") as f:
-    f.write(""" 
-    CREATE TABLE IF NOT EXISTS demonstracoes_contabeis (
-        DATA DATE,
-        REG_ANS BIGINT,
-        CD_CONTA_CONTABIL BIGINT,
-        DESCRICAO TEXT,
-        VL_SALDO_INICIAL NUMERIC(18,2),
-        VL_SALDO_FINAL NUMERIC(18,2)
-    );
-    """)
-    f.write(f"\copy {tabela} FROM '{csv_file}' DELIMITER ';' CSV NULL 'NULL' ENCODING 'UTF8';\n")
 
 print("\n")
 print(f"CSV gerado: {csv_file}")
-print(f"Script SQL gerado: {sql_file}")
 print("\n")
 
-comando = input("Você deseja executar o comando para importar os dados no banco? (Digite 'sim' para executar ou 'não' para cancelar): ")
-if comando.lower() == 'sim' or comando.lower() == 's' or comando.lower() == 'y' or comando.lower() == 'yes':
+deseja_importar_os_dados = input("Você deseja executar o comando para importar os dados para o banco de dados (Postgres)? (Digite 'sim' para executar ou 'não' para cancelar): ")
+if deseja_importar_os_dados.lower() == 'sim' or deseja_importar_os_dados.lower() == 's' or deseja_importar_os_dados.lower() == 'y' or deseja_importar_os_dados.lower() == 'yes':
     inserir_dados_no_postgres()    
 else:
     print("Ação cancelada.")
