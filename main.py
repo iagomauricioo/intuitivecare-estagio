@@ -21,6 +21,7 @@ from operacoes_no_db import inserir_dados_no_postgres, visualizar_tabela
 
 pasta_csv = 'documentos/demonstracoes_contabeis'
 arquivos = [f for f in os.listdir(pasta_csv) if f.endswith('.csv')]
+arquivos.sort()
 dfs = []
 for arquivo in arquivos:
     caminho_arquivo = os.path.join(pasta_csv, arquivo)
