@@ -10,7 +10,7 @@ CREATE TABLE IF NOT EXISTS demonstracoes_contabeis (
 \copy demonstracoes_contabeis FROM 'demonstracoes_contabeis.csv' DELIMITER ';' CSV NULL 'NULL' ENCODING 'UTF8';
 
 CREATE TABLE IF NOT EXISTS operadoras (
-  REGISTRO_OPERADORA VARCHAR(6),
+  REGISTRO_OPERADORA BIGINT,
   CNPJ VARCHAR(14),
   Razao_Social VARCHAR(140),
   Nome_Fantasia VARCHAR(140),
@@ -31,6 +31,5 @@ CREATE TABLE IF NOT EXISTS operadoras (
   Regiao_de_Comercializacao VARCHAR(1),
   Data_Registro_ANS DATE
 );
-
 
 \copy operadoras FROM 'dados_operadoras.csv' DELIMITER ';' CSV NULL 'NULL' ENCODING 'UTF8';

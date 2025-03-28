@@ -28,9 +28,9 @@ for arquivo in arquivos:
     try:
         df = pd.read_csv(caminho_arquivo, sep=";", encoding="utf-8", on_bad_lines="skip")
         dfs.append(df)
-        print(f"✔ Arquivo lido corretamente: {arquivo}")
+        print(f"Arquivo lido corretamente: {arquivo}")
     except Exception as e:
-        print(f"❌ Erro ao ler {arquivo}: {e}")
+        print(f"Erro ao ler {arquivo}: {e}")
 if not dfs:
     print("Nenhum arquivo pôde ser lido.")
     exit()

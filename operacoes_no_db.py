@@ -21,7 +21,7 @@ def iniciar_postgres_com_docker():
         print("Aguardando o PostgreSQL iniciar...")
         time.sleep(10)
     except subprocess.CalledProcessError as e:
-        print(f"❌ Erro ao iniciar o PostgreSQL: {e}")
+        print(f"Erro ao iniciar o PostgreSQL: {e}")
         return False
     return True
 
@@ -29,20 +29,20 @@ def inserir_dados_no_postgres():
     if not verificar_postgres_rodando():
         print("PostgreSQL não está rodando. Iniciando com Docker...")
         if not iniciar_postgres_com_docker():
-            print("❌ Não foi possível iniciar o PostgreSQL.")
+            print("Não foi possível iniciar o PostgreSQL.")
             return
         print("PostgreSQL iniciado com sucesso.")
     
     try:
         comando = f"PGPASSWORD='{password}' psql -h {host} -U {user} -d {database} -f {sql_file}"
         subprocess.run(comando, shell=True, check=True)
-        print("🚀 Arquivo SQL executado com sucesso!\n")
+        print("Arquivo SQL executado com sucesso!\n")
     except subprocess.CalledProcessError as e:
-        print(f"❌ Erro ao executar o SQL: {e}")
+        print(f"Erro ao executar o SQL: {e}")
 
 def visualizar_tabela(quantidade_de_linhas):
     try:
         comando = f"PGPASSWORD='{password}' psql -h {host} -U {user} -d {database} -c 'SELECT * FROM demonstracoes_contabeis LIMIT {quantidade_de_linhas}'"
         subprocess.run(comando, shell=True, check=True)
     except subprocess.CalledProcessError as e:
-        print(f"❌ Erro ao visualizar a tabela: {e}")
+        print(f"Erro ao visualizar a tabela: {e}")
