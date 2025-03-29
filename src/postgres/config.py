@@ -1,0 +1,5 @@
+HOST = "localhost"
+USER = "intuitivecare"
+PASSWORD = "intuitivecare@2025"
+DATABASE = "app"
+SQL_FILE = "../import.sql"

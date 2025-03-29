@@ -7,8 +7,6 @@ CREATE TABLE IF NOT EXISTS demonstracoes_contabeis (
     VL_SALDO_FINAL NUMERIC(18,2)
 );
 
-\copy demonstracoes_contabeis FROM 'demonstracoes_contabeis.csv' DELIMITER ';' CSV NULL 'NULL' ENCODING 'UTF8';
-
 CREATE TABLE IF NOT EXISTS operadoras (
   REGISTRO_OPERADORA BIGINT,
   CNPJ VARCHAR(14),
@@ -31,5 +29,3 @@ CREATE TABLE IF NOT EXISTS operadoras (
   Regiao_de_Comercializacao VARCHAR(1),
   Data_Registro_ANS DATE
 );
-
-\copy operadoras FROM 'dados_operadoras.csv' DELIMITER ';' CSV NULL 'NULL' ENCODING 'UTF8';

@@ -174,3 +174,4 @@ cython_debug/
 .pypirc
 
 demonstracoes_contabeis.csv
+dados_operadoras.csv
