@@ -1,5 +1,5 @@
 <template>
-  <HelloWorld />
+  <Header />
   <HealthData />
   <HealthCharts />
 </template>
