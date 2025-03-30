@@ -2,7 +2,7 @@
 
 Candidato: Iago Mauricio dos Santos Silva
 
-<a href="https://www.linkedin.com/in/iagomauricioo/">Linkedin</a>
+<a href="https://www.linkedin.com/in/iagomauricioo/">Linkedin</a> / / /
 <a href="https://github.com/iagomauricioo">Github</a>
 
 ## Questão 1 e 2
@@ -17,10 +17,25 @@ Esse notebook contém tanto a questão 1 como a 2, lá você vai encontrar a des
 ### Sobre o código:
 
 ##### Atenção
-Antes de rodar o código, execute `pip install -r requirements.txt`. Recomendo fortemente que você crie um <a href="https://docs.python.org/3/library/venv.html">Virtual Enviroment</a> (.venv) com `python3 -m venv .venv` para que as bibliotecas python instaladas em sua máquina não conflitem com as que serão instaladas nesse projeto.
+Antes de rodar o código, execute `pip install -r requirements.txt`. Recomendo fortemente que você crie um <a href="https://docs.python.org/3/library/venv.html">Virtual Enviroment</a> (.venv) com `python3 -m venv .venv` para que as bibliotecas python instaladas em sua máquina não conflitem com as que serão instaladas nesse projeto. Observe que existem 2 requirements.txt no projeto, um na raiz do projeto e outro em /questao_quatro, recomendo que você crie .venv's diferentes, um para cada requirement.
 
-O arquivo `main.py` é responsável por ler os arquivos .csv e unificar todos eles no arquivo `demonstracoes_contabeis.csv` (que só é gerado após o código rodar), após isso ele irá lhe pergunta se você quer importar os dados gerados para o Postgres, se você digitar "sim" ele irá rodar o arquivo `operacoes_no_db.py`.
+Na raiz do projeto, encontra-se a terceira questão, ou seja, arquivos percentes a `/src` e `/documentos` são da 3º questão. O arquivo `main.py` é responsável por ler os arquivos .csv e unificar todos eles no arquivo `demonstracoes_contabeis.csv` (que só é gerado após o código rodar), após isso ele irá lhe perguntar se você quer importar os dados gerados para o Postgres, você digita "sim" ou "não".
 
-O arquivo `operacoes_no_db.py` é responsável por checar se o banco de dados está rodando, iniciar o banco caso esteja offline e executar a transferência dos dados para o POSTGRES que estará rodando num container Docker. É importante que você tenha o Docker instalado em sua máquina, abaixo deixarei um link de instrução de download segundo a documentação da ferramenta. <a href="https://docs.docker.com/engine/install/">Clique aqui para baixar!</a>
+A classe `PostgresManager` é responsável por checar se o banco de dados está rodando, iniciar o banco caso esteja offline e executar a transferência dos dados para o POSTGRES que estará rodando num container Docker. É importante que você tenha o Docker instalado em sua máquina, abaixo deixarei um link de instrução de download segundo a documentação da ferramenta. <a href="https://docs.docker.com/engine/install/">Clique aqui para baixar!</a>
 
-Optei por utilizar o comando COPY no arquivo `import.sql` buscando maior performance visto que eram mais de 6.000.000 (seis milhões) de linhas, então iriam demorar horas (dependendo do poder de processamento) para inserir todos os dados no banco.wq
+
+### Questão 4
+
+Foi solicitado a criação de um front-end em ![Vue.js](https://img.shields.io/badge/vuejs-%2335495e.svg?style=for-the-badge&logo=vuedotjs&logoColor=%234FC08D) que consome uma API em Python. 
+
+Optei por fazer a API utilizando FastAPI já que era algo simples como ler um CSV e transformar em um JSON.
+
+Portanto, na pasta `/questao_quatro` você encontrará a pasta `/front-end` que conterá o VueJS e todo o restante pertence ao back-end da aplicação em Python. Nessa parte você precisará criar um novo .venv e instalar os `requirements.txt`.
+
+### API hospedada num servidor
+
+A API dessa aplicação já está rodando em um Servidor Virtual Privado (VPS). Portanto, se você quiser, não precisa rodar a API, mas sim só consumir pelo Swagger/Postman.
+
+<a href="http://165.22.1.202:8000/docs">Link para coleção do Swagger (http://165.22.1.202:8000/docs)</a>
+
+Se você quiser importar essa coleção para o seu POSTMAN, crie um novo workspace e importe a coleção de `http://165.22.1.202:8000/openapi.json`, ele lhe trará 2 endpoints.
