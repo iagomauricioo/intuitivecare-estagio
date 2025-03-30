@@ -10,7 +10,6 @@ const openReadmeInEditor = () => fetch('/__open-in-editor?file=README.md')
 </script>
 
 <template>
-  
   <WelcomeItem>
     <template #icon>
       <DocumentationIcon />
@@ -18,9 +17,14 @@ const openReadmeInEditor = () => fetch('/__open-in-editor?file=README.md')
     <template #heading>Desenvolvimento</template>
 
     Este projeto foi desenvolvido por
-    <a href="https://vuejs.org/" target="_blank" rel="noopener">Iago Mauricio</a>
-    e você pode visualizar o código fonte <a href="https://vuejs.org/" target="_blank" rel="noopener">neste
-      repositório.</a>
+    <a href="https://github.com/iagomauricioo" target="_blank" rel="noopener">Iago Mauricio</a>
+    e você pode visualizar o código fonte
+    <a
+      href="https://github.com/iagomauricioo/intuitivecare-estagio.git"
+      target="_blank"
+      rel="noopener"
+      >neste repositório.</a
+    >
   </WelcomeItem>
 
   <WelcomeItem>
@@ -30,7 +34,7 @@ const openReadmeInEditor = () => fetch('/__open-in-editor?file=README.md')
     <template #heading>Sobre mim</template>
 
     Me chamo Iago Mauricio, sou estudante de Sistemas de Informação e desenvolvedor fullstack.
-    <a href="https://vite.dev/guide/features.html" target="_blank" rel="noopener">Linkedin</a>.
+    <a href="https://www.linkedin.com/in/iagomauricioo" target="_blank" rel="noopener">Linkedin</a>.
     <a href="https://github.com/iagomauricioo" target="_blank" rel="noopener">Github</a>
 
     <br />

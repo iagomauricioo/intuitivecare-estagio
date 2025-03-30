@@ -68,7 +68,7 @@
 </template>
 
 <script>
-import axios from 'axios';
+import axios from 'axios'
 
 export default {
   data() {
@@ -79,32 +79,33 @@ export default {
       razaoSocial: '',
       nomeFantasia: '',
       modalidade: '',
-    };
+    }
   },
   methods: {
     async buscarOperadoras() {
-      const params = {};
+      const params = {}
 
-      if (this.registroAns) params.registro_ans = this.registroAns;
-      if (this.cnpj) params.cnpj = this.cnpj;
-      if (this.razaoSocial) params.razao_social = this.razaoSocial;
-      if (this.nomeFantasia) params.nome_fantasia = this.nomeFantasia;
-      if (this.modalidade) params.modalidade = this.modalidade;
+      if (this.registroAns) params.registro_ans = this.registroAns
+      if (this.cnpj) params.cnpj = this.cnpj
+      if (this.razaoSocial) params.razao_social = this.razaoSocial
+      if (this.nomeFantasia) params.nome_fantasia = this.nomeFantasia
+      if (this.modalidade) params.modalidade = this.modalidade
 
       try {
-        const response = await axios.get('http://127.0.0.1:8000/api/v1/operadoras/buscar', { params });
+        const response = await axios.get('http://165.22.1.202:8000/api/v1/operadoras/buscar', {
+          params,
+        })
 
-
-        this.operadoras = response.data.data;
+        this.operadoras = response.data.data
       } catch (error) {
-        console.error("Erro ao buscar dados:", error);
+        console.error('Erro ao buscar dados:', error)
       }
-    }
+    },
   },
   mounted() {
-    this.buscarOperadoras();
-  }
-};
+    this.buscarOperadoras()
+  },
+}
 </script>
 
 <style scoped>
