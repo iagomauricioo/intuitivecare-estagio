@@ -7,7 +7,13 @@ export {}
 /* prettier-ignore */
 declare module 'vue' {
   export interface GlobalComponents {
+    Charts: typeof import('./src/components/Charts.vue')['default']
+    HealthCharts: typeof import('./src/components/HealthCharts.vue')['default']
+    HealthChartsContainer: typeof import('./src/components/HealthChartsContainer.vue')['default']
     HealthData: typeof import('./src/components/HealthData.vue')['default']
+    HealthFilters: typeof import('./src/components/HealthFilters.vue')['default']
+    HealthHeader: typeof import('./src/components/HealthHeader.vue')['default']
+    HealthMap: typeof import('./src/components/HealthMap.vue')['default']
     HelloWorld: typeof import('./src/components/HelloWorld.vue')['default']
     Home: typeof import('./src/components/Home.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
