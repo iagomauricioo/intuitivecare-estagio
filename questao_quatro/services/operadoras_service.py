@@ -3,7 +3,7 @@ import os
 import numpy as np
 
 def carregar_dados_operadoras() -> list:
-    caminho_csv = os.path.join('documentos', 'dados_operadoras.csv')
+    caminho_csv = os.path.join('documentos', 'dados_operadoras_com_header.csv')
     
     df = pd.read_csv(caminho_csv, encoding='utf-8', delimiter=';')
     df = df.replace([np.inf, -np.inf], np.nan)
