@@ -14,6 +14,8 @@ Optei por fazer as questões 1 e 2 utilizando um serviço de computação em nuv
 
 Esse notebook contém tanto a questão 1 como a 2, lá você vai encontrar a descrição para cada questão.
 
+Não precisa se preocupar com instalações, apenas execute o código inteiro!
+
 ### Sobre o código:
 
 ##### Atenção
@@ -23,6 +25,7 @@ Na raiz do projeto, encontra-se a terceira questão, ou seja, arquivos percentes
 
 A classe `PostgresManager` é responsável por checar se o banco de dados está rodando, iniciar o banco caso esteja offline e executar a transferência dos dados para o POSTGRES que estará rodando num container Docker. É importante que você tenha o Docker instalado em sua máquina, abaixo deixarei um link de instrução de download segundo a documentação da ferramenta. <a href="https://docs.docker.com/engine/install/">Clique aqui para baixar!</a>
 
+A resolução do tópico 3.5 é o arquivo `relatorios_operadoras.sql` que pode ser localizado na raiz do projeto. Ele responde aquelas perguntas `Quais as 10 operadoras que fizeram tal coisa... no último trimestre`.
 
 ### Questão 4
 
