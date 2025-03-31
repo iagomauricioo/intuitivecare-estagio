@@ -39,11 +39,11 @@ Portanto, na pasta `/questao_quatro` você encontrará a pasta `/front-end` que 
 
 A API dessa aplicação já está rodando em um Servidor Virtual Privado (VPS). Portanto, se você quiser, não precisa rodar a API, mas sim só consumir pelo Swagger/Postman.
 
-<a href="http://165.22.1.202:8000/docs">Link para coleção do Swagger (http://165.22.1.202:8000/docs)</a>
+<a href="http://165.22.1.202:8000/docs" target="_blank">Link para coleção do Swagger (http://165.22.1.202:8000/docs)</a>
 
 Se você quiser importar essa coleção para o seu POSTMAN, crie um novo workspace e importe a coleção de `http://165.22.1.202:8000/openapi.json`, ele lhe trará 2 endpoints.
 
-Caso você decida consumir o back-end de forma local é EXTREMAMENTE importante que você altere a URL com o IPv4 do servidor para `localhost` no arquivo `questao_quatro/front-end/intuitivecare-front-end/src/views/DashboardView.vue` na `linha 95`.
+Caso você decida consumir o back-end de forma local é EXTREMAMENTE importante que você altere a URL com o IPv4 do servidor para `localhost` no arquivo `/questao_quatro/front-end/src/components/HealthData.vue` na `linha 73`.
 
 É isso! Espero que tenha gostado e conseguido executar todas as etapas com sucesso, deu um trabalhão! Foi um aprendizado muito massa. Enfim, fico disponível para mais informações.
 
