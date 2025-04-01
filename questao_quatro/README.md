@@ -9,8 +9,10 @@ Ambos estão em produção rodando nos seguintes links: <br><br>
 
 Existem 2 endpoints nessa API.
 
-`GET /operadoras`
-`GET /operadoras/buscar?` + parâmetros http
+Ambos precisam do prefixo `/api/v1`
+
+`GET /operadoras` (/api/v1/operadoras) <br>
+`GET /operadoras/buscar?` + parâmetros http (/api/v1/operadoras/buscar)
 
 Recomendo que para facilitar sua vida e facilitar a visualização de dados você entre no Swagger para entender melhor, lá terá tudo que você precisa, desde as rotas até os parâmetros necessários para enviar requisições.
 
