@@ -1,6 +1,11 @@
 # API para realizar busca textual no arquivo de Operadoras
 
 Essa API está rodando na porta `8000` que é padrão do FastAPI.
+O front-end está rodando na porta 3000 do VueJS.
+
+Ambos estão em produção rodando nos seguintes links: <br><br>
+<a href="https://iagomauricio.com">https://iagomauricio.com</a> -> Front <br><br>
+<a href="https://api.iagomauricio.com">https://api.iagomauricio.com</a> -> API
 
 Existem 2 endpoints nessa API.
 
@@ -11,12 +16,12 @@ Recomendo que para facilitar sua vida e facilitar a visualização de dados voc�
 
 o swagger se encontra em:
 
-<a href="http://165.22.1.202:8000/docs">
-http://165.22.1.202:8000/docs
+<a href="https://api.iagomauricio.com/docs">
+https://api.iagomauricio.com/docs
 </a>
 <br>
 ou se estiver rodando local:
 
-<a href="http://165.22.1.202:8000/docs">
+<a href="http://localhost:8080/docs">
 http://localhost:8000/docs
 </a>
