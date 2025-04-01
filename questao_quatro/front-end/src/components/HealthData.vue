@@ -70,7 +70,7 @@ const buscarOperadoras = async () => {
     if (filtros.value.modalidade) params.modalidade = filtros.value.modalidade
 
     try {
-        const response = await axios.get('http://165.22.1.202:8000/api/v1/operadoras/buscar', {
+        const response = await axios.get('https://api.iagomauricio.com/api/v1/operadoras/buscar', {
             params,
         })
 

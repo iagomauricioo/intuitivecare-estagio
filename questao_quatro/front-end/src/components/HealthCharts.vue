@@ -8,7 +8,7 @@
                         Dashboard de Operadoras de Saúde
                     </v-card-title>
                     <v-card-subtitle>
-                        Dados consumidos da API: http://165.22.1.202:8000/api/v1/operadoras/
+                        Dados consumidos da API: https://api.iagomauricio.com/api/v1/operadoras/
                     </v-card-subtitle>
                 </v-card>
             </v-col>
@@ -165,7 +165,7 @@ const formatPhone = (phone) => {
 const fetchData = async () => {
     try {
         loading.value = true;
-        const response = await axios.get('http://165.22.1.202:8000/api/v1/operadoras/buscar');
+        const response = await axios.get('https://api.iagomauricio.com/api/v1/operadoras/buscar');
         operadoras.value = response.data.data || response.data;
         filteredOperadoras.value = [...operadoras.value]; // Inicializa com todos os dados
 
