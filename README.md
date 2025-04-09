@@ -1,53 +1,101 @@
-# Vaga de estágio em Desenvolvimento (remoto) na Intuitive Care
+# Processo Seletivo - Estágio em Desenvolvimento (Remoto) - Intuitive Care
 
-Candidato: Iago Mauricio dos Santos Silva
+## 👤 Candidato
+**Nome:** Iago Mauricio dos Santos Silva  
+**LinkedIn:** [iagomauricioo](https://www.linkedin.com/in/iagomauricioo/)  
+**GitHub:** [iagomauricioo](https://github.com/iagomauricioo)  
+**Contato:**  
+- WhatsApp: (82) 99102-1732  
+- E-mail: iagomauricio7@gmail.com
 
-<a href="https://www.linkedin.com/in/iagomauricioo/">Linkedin</a> / / /
-<a href="https://github.com/iagomauricioo">Github</a>
+## 📋 Sobre o Projeto
+Este repositório contém as soluções desenvolvidas para o processo seletivo de estágio em desenvolvimento da Intuitive Care. O projeto está dividido em 4 questões principais, cada uma com sua própria estrutura e requisitos.
 
-## Questão 1 e 2
+## 🚀 Questões 1 e 2 - Análise de Dados
+As questões 1 e 2 foram desenvolvidas utilizando o Google Colab para processamento em nuvem.
 
-Optei por fazer as questões 1 e 2 utilizando um serviço de computação em nuvem em um cluster do <a href="https://colab.research.google.com/drive/1Pq-1cBO6AIXMyY-JAn-PWqbUyN3mMrpF?usp=sharing"><img src="https://img.shields.io/badge/Google%20Colab-%23F9A825.svg?style=for-the-badge&logo=googlecolab&logoColor=white" width="120"></a>
-, já que não seria necessário a utilização de banco de dados, então me senti mais confortável em fazer por lá.
+### 🔗 Links
+- [Notebook Python no Google Colab](https://colab.research.google.com/drive/1Pq-1cBO6AIXMyY-JAn-PWqbUyN3mMrpF?usp=sharing)
+- [Badge Google Colab](https://img.shields.io/badge/Google%20Colab-%23F9A825.svg?style=for-the-badge&logo=googlecolab&logoColor=white)
 
-<a href="https://colab.research.google.com/drive/1Pq-1cBO6AIXMyY-JAn-PWqbUyN3mMrpF?usp=sharing">Link para o notebook Python</a>
+### 📝 Observações
+- Não é necessário instalação local
+- Basta executar o código no ambiente do Colab
+- Todas as dependências estão configuradas no ambiente
 
-Esse notebook contém tanto a questão 1 como a 2, lá você vai encontrar a descrição para cada questão.
+## 📊 Questão 3 - Processamento de Dados e PostgreSQL
+A terceira questão está localizada na raiz do projeto, com os seguintes componentes:
 
-Não precisa se preocupar com instalações, apenas execute o código inteiro!
+### Estrutura de Arquivos
+```
+/
+├── src/
+├── documentos/
+├── main.py
+└── relatorios_operadoras.sql
+```
 
-### Sobre o código:
+### Requisitos
+- Python 3.x
+- Docker
+- PostgreSQL
 
-##### Atenção
-Antes de rodar o código, execute `pip install -r requirements.txt`. Recomendo fortemente que você crie um <a href="https://docs.python.org/3/library/venv.html">Virtual Enviroment</a> (.venv) com `python3 -m venv .venv` para que as bibliotecas python instaladas em sua máquina não conflitem com as que serão instaladas nesse projeto. Observe que existem 2 requirements.txt no projeto, um na raiz do projeto e outro em /questao_quatro, recomendo que você crie .venv's diferentes, um para cada requirement.
+### Configuração
+1. Criar ambiente virtual:
+   ```bash
+   python3 -m venv .venv
+   source .venv/bin/activate  # Linux/Mac
+   # ou
+   .venv\Scripts\activate  # Windows
+   ```
 
-Na raiz do projeto, encontra-se a terceira questão, ou seja, arquivos percentes a `/src` e `/documentos` são da 3º questão. O arquivo `main.py` é responsável por ler os arquivos .csv e unificar todos eles no arquivo `demonstracoes_contabeis.csv` (que só é gerado após o código rodar), após isso ele irá lhe perguntar se você quer importar os dados gerados para o Postgres, você digita "sim" ou "não".
+2. Instalar dependências:
+   ```bash
+   pip install -r requirements.txt
+   ```
 
-A classe `PostgresManager` é responsável por checar se o banco de dados está rodando, iniciar o banco caso esteja offline e executar a transferência dos dados para o POSTGRES que estará rodando num container Docker. É importante que você tenha o Docker instalado em sua máquina, abaixo deixarei um link de instrução de download segundo a documentação da ferramenta. <a href="https://docs.docker.com/engine/install/">Clique aqui para baixar!</a>
+3. Iniciar o container Docker com PostgreSQL
 
-A resolução do tópico 3.5 é o arquivo `relatorios_operadoras.sql` que pode ser localizado na raiz do projeto. Ele responde aquelas perguntas `Quais as 10 operadoras que fizeram tal coisa... no último trimestre`.
+### Funcionalidades
+- `main.py`: Processa arquivos CSV e gera `demonstracoes_contabeis.csv`
+- `PostgresManager`: Gerencia conexão e importação de dados para PostgreSQL
+- `relatorios_operadoras.sql`: Contém as consultas para análise dos dados
 
-### Questão 4
+## 🌐 Questão 4 - Frontend Vue.js e API FastAPI
+A quarta questão implementa uma aplicação web com frontend em Vue.js e backend em FastAPI.
 
-Foi solicitado a criação de um front-end em ![Vue.js](https://img.shields.io/badge/vuejs-%2335495e.svg?style=for-the-badge&logo=vuedotjs&logoColor=%234FC08D) que consome uma API em Python. 
+### Estrutura
+```
+/questao_quatro
+├── front-end/          # Aplicação Vue.js
+└── back-end/          # API FastAPI
+```
 
-Optei por fazer a API utilizando FastAPI já que era algo simples como ler um CSV e transformar em um JSON.
+### Configuração
+1. Criar ambiente virtual específico:
+   ```bash
+   python3 -m venv .venv-questao4
+   source .venv-questao4/bin/activate
+   ```
 
-Portanto, na pasta `/questao_quatro` você encontrará a pasta `/front-end` que conterá o VueJS e todo o restante pertence ao back-end da aplicação em Python. Nessa parte você precisará criar um novo .venv e instalar os `requirements.txt`.
+2. Instalar dependências:
+   ```bash
+   pip install -r requirements.txt
+   ```
 
-### API hospedada num servidor
+### API em Produção
+A API está disponível em produção:
+- **Swagger UI:** [https://api.iagomauricio.com/docs](https://api.iagomauricio.com/docs)
+- **OpenAPI Spec:** [https://api.iagomauricio.com/openapi.json](https://api.iagomauricio.com/openapi.json)
 
-A API dessa aplicação já está rodando em um Servidor Virtual Privado (VPS). Portanto, se você quiser, não precisa rodar a API, mas sim só consumir pelo Swagger/Postman.
+### Configuração do Frontend
+Para desenvolvimento local:
+1. Alterar a URL da API no arquivo `/questao_quatro/front-end/src/components/HealthData.vue` (linha 73)
+2. Substituir o IPv4 do servidor por `localhost`
 
-<a href="https://api.iagomauricio.com/docs" target="_blank">Link para coleção do Swagger (https://api.iagomauricio.com/docs)</a>
+## 📚 Documentação Adicional
+- [Documentação Docker](https://docs.docker.com/engine/install/)
+- [Documentação Python venv](https://docs.python.org/3/library/venv.html)
 
-Se você quiser importar essa coleção para o seu POSTMAN, crie um novo workspace e importe a coleção de `https://api.iagomauricio.com/openapi.json`, ele lhe trará 2 endpoints.
-
-Caso você decida consumir o back-end de forma local é EXTREMAMENTE importante que você altere a URL com o IPv4 do servidor para `localhost` no arquivo `/questao_quatro/front-end/src/components/HealthData.vue` na `linha 73`.
-
-É isso! Espero que tenha gostado e conseguido executar todas as etapas com sucesso, deu um trabalhão! Foi um aprendizado muito massa. Enfim, fico disponível para mais informações.
-
-Contato:
-
-Whatsapp -> (82) 99102-1732 <br>
-E-mail -> iagomauricio7@gmail.com
+## 🤝 Considerações Finais
+Este projeto foi desenvolvido com o objetivo de demonstrar habilidades técnicas e capacidade de resolução de problemas. Fique à vontade para entrar em contato caso tenha dúvidas ou sugestões.

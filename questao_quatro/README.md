@@ -1,29 +1,52 @@
-# API para realizar busca textual no arquivo de Operadoras
+# 🚀 API de Busca Textual em Operadoras
 
-Essa API está rodando na porta `8000` que é padrão do FastAPI.
-O front-end está rodando na porta 3000 do VueJS.
+## 🌐 Endpoints Disponíveis
 
-Ambos estão em produção rodando nos seguintes links: <br><br>
-<a href="https://iagomauricio.com">https://iagomauricio.com</a> -> Front <br><br>
-<a href="https://api.iagomauricio.com">https://api.iagomauricio.com</a> -> API
+### Base URL
+- Produção: `https://api.iagomauricio.com`
+- Local: `http://localhost:8000`
 
-Existem 2 endpoints nessa API.
+### Prefixo da API
+Todos os endpoints requerem o prefixo `/api/v1`
 
-Ambos precisam do prefixo `/api/v1`
+### Endpoints
+1. **Listar Operadoras**
+   - Método: `GET`
+   - Rota: `/operadoras`
+   - URL Completa: `/api/v1/operadoras`
 
-`GET /operadoras` (/api/v1/operadoras) <br>
-`GET /operadoras/buscar?` + parâmetros http (/api/v1/operadoras/buscar)
+2. **Buscar Operadoras**
+   - Método: `GET`
+   - Rota: `/operadoras/buscar`
+   - URL Completa: `/api/v1/operadoras/buscar`
+   - Parâmetros: Query parameters HTTP
 
-Recomendo que para facilitar sua vida e facilitar a visualização de dados você entre no Swagger para entender melhor, lá terá tudo que você precisa, desde as rotas até os parâmetros necessários para enviar requisições.
+## 📚 Documentação
 
-o swagger se encontra em:
+### Swagger UI
+Para uma melhor experiência de desenvolvimento e visualização da API, utilize o Swagger UI:
 
-<a href="https://api.iagomauricio.com/docs">
-https://api.iagomauricio.com/docs
-</a>
-<br>
-ou se estiver rodando local:
+- **Produção:** [https://api.iagomauricio.com/docs](https://api.iagomauricio.com/docs)
+- **Local:** [http://localhost:8000/docs](http://localhost:8000/docs)
 
-<a href="http://localhost:8080/docs">
-http://localhost:8000/docs
-</a>
+## 🖥️ Frontend
+
+O frontend da aplicação está disponível em:
+- **URL:** [https://iagomauricio.com](https://iagomauricio.com)
+- **Porta:** 3000
+
+## 🔧 Configuração Local
+
+### Portas
+- API: 8000 (FastAPI)
+- Frontend: 3000 (Vue.js)
+
+### Requisitos
+- Python 3.x
+- Node.js (para o frontend)
+- Dependências listadas em `requirements.txt`
+
+## 📝 Observações
+- Utilize o Swagger UI para facilitar o entendimento das rotas e parâmetros
+- A documentação completa da API está disponível no Swagger
+- Para desenvolvimento local, ajuste as URLs conforme necessário
