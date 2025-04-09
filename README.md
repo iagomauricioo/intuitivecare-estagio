@@ -91,7 +91,7 @@ A API está disponível em produção:
 ### Configuração do Frontend
 Para desenvolvimento local:
 1. Alterar a URL da API no arquivo `/questao_quatro/front-end/src/components/HealthData.vue` (linha 73)
-2. Substituir o IPv4 do servidor por `localhost`
+2. Substituir o endereço do servidor por `localhost`
 
 ## 📚 Documentação Adicional
 - [Documentação Docker](https://docs.docker.com/engine/install/)
